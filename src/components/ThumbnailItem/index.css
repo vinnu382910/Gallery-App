@@ -1,0 +1,10 @@
+/* Write your code here. */
+.thumbnail-img {
+  opacity: 0.5;
+}
+
+.img-btn {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
