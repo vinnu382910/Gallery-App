@@ -77,22 +77,16 @@ const imagesList = [
 
 class Gallery extends Component {
   state = {
-    tabId: imagesList[0].id,
-    imageUrl: imagesList[0].imageUrl,
-    imageAltText: imagesList[0].imageAltText,
+    activeThumbNailId: imagesList[0].id,
   }
 
   onChangeImg = id => {
-    const reqImg = imagesList.find(eachImg => eachImg.id === id)
-    this.setState({
-      imageUrl: reqImg.imageUrl,
-      imageAltText: reqImg.imageAltText,
-      tabId: reqImg.id,
-    })
+    this.setState({activeThumbNailId: id})
   }
 
   render() {
-    const {tabId, imageUrl, imageAltText} = this.state
+    const {activeThumbNailId} = this.state
+    const {imageUrl, imageAltText} = imagesList[activeThumbNailId]
     return (
       <div className="Photography-cont">
         <div>
